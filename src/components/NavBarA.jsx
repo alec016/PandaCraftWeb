@@ -12,11 +12,11 @@ export default function NavBarA(){
                         <span className="nav-notificationA">5</span>
                     </label>
                 </Link>
-                <Link to="/privacy">
+                <Link to="/PandaCraftWeb/docs/privacy">
                     <input type="radio" id="radio-2" name="nav-tabsA"/>
                     <label className="nav-tabA" htmlFor="radio-2">Privacy policity</label>
                 </Link>
-                <Link to="/profile">
+                <Link to="/PandaCraftWeb/docs/profile">
                     <input type="radio" id="radio-3" name="nav-tabsA" defaultChecked/>
                     <label className="nav-tabA" htmlFor="radio-3">Profile</label>
                 </Link>
