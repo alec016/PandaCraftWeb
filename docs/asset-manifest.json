@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/docs/static/css/main.71ba60c3.css",
-    "main.js": "/docs/static/js/main.b4113964.js",
-    "static/js/787.bc7d429a.chunk.js": "/docs/static/js/787.bc7d429a.chunk.js",
-    "index.html": "/docs/index.html",
-    "main.71ba60c3.css.map": "/docs/static/css/main.71ba60c3.css.map",
-    "main.b4113964.js.map": "/docs/static/js/main.b4113964.js.map",
-    "787.bc7d429a.chunk.js.map": "/docs/static/js/787.bc7d429a.chunk.js.map"
+    "main.css": "/PandaCraftWeb/docs/static/css/main.71ba60c3.css",
+    "main.js": "/PandaCraftWeb/docs/static/js/main.b4113964.js",
+    "static/js/787.bc7d429a.chunk.js": "/PandaCraftWeb/docs/static/js/787.bc7d429a.chunk.js",
+    "index.html": "/PandaCraftWeb/docs/index.html",
+    "main.71ba60c3.css.map": "/PandaCraftWeb/docs/static/css/main.71ba60c3.css.map",
+    "main.b4113964.js.map": "/PandaCraftWeb/docs/static/js/main.b4113964.js.map",
+    "787.bc7d429a.chunk.js.map": "/PandaCraftWeb/docs/static/js/787.bc7d429a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71ba60c3.css",
