@@ -1,0 +1,22 @@
+.h{
+    padding-left: 5vw;
+    color: white;
+    margin: 40px 0;
+    & > .h-title{
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-decoration: underline;
+        color: var(--turquoise);
+    }
+}
+.h-text{
+    font-size: 1.75rem;
+    padding-left: 5vw;
+    & > p:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+.h-subtitle{
+    text-decoration: underline;
+    margin-left: -3vw;
+}
