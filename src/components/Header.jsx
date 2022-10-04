@@ -23,8 +23,13 @@ export default function Header(){
     return(
         <header>
             <div className="m-50-l m-50-r flex center-y p-rel">
+<<<<<<< HEAD
                 <a className="block img-logo" href="/PandaCraftWeb/docs/">
                     <img src="./img/logo.png" alt="LOGO" id="logo" />
+=======
+                <a className="block img-logo" href="/">
+                    <img src="/PandaCraftWeb/docs//img/logo.png" alt="LOGO" id="logo" />
+>>>>>>> 78ef03939f876f9314d872ed125635c2bb36d3ee
                 </a>
                 <a className="block s-logo" href="/PandaCraftWeb/docs/">
                     <span className="turquoise-color"> Panda</span>

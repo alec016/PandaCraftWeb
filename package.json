@@ -23,7 +23,11 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< HEAD
   "homepage": "/PandaCraftWeb/docs/",
+=======
+  "homepage": "PandaCraftWeb/docs/",
+>>>>>>> 78ef03939f876f9314d872ed125635c2bb36d3ee
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
