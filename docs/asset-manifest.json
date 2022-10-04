@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PandaCraftWeb/docs/static/css/main.71ba60c3.css",
-    "main.js": "/PandaCraftWeb/docs/static/js/main.f75a5a5f.js",
+    "main.js": "/PandaCraftWeb/docs/static/js/main.14534502.js",
     "static/js/787.bc7d429a.chunk.js": "/PandaCraftWeb/docs/static/js/787.bc7d429a.chunk.js",
     "index.html": "/PandaCraftWeb/docs/index.html",
     "main.71ba60c3.css.map": "/PandaCraftWeb/docs/static/css/main.71ba60c3.css.map",
-    "main.f75a5a5f.js.map": "/PandaCraftWeb/docs/static/js/main.f75a5a5f.js.map",
+    "main.14534502.js.map": "/PandaCraftWeb/docs/static/js/main.14534502.js.map",
     "787.bc7d429a.chunk.js.map": "/PandaCraftWeb/docs/static/js/787.bc7d429a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71ba60c3.css",
-    "static/js/main.f75a5a5f.js"
+    "static/js/main.14534502.js"
   ]
 }
