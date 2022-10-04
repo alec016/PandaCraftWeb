@@ -13,21 +13,21 @@ export default function Footer(){
                         <h4>Compañia</h4>
                         <ul>
                             <li>
-                                <Link to="/about">Sobre nosotros</Link>
+                                <Link to="/PandaCraftWeb/docs/about">Sobre nosotros</Link>
                             </li>
-                            <li><a href="services">Nuestros servicios</a></li>
-                            <li><Link to="/privacy">Política de privacidad</Link></li>
-                            <li><a href="affiliate">Programa de afiliación</a></li>
+                            <li><a href="/PandaCraftWeb/docs/services">Nuestros servicios</a></li>
+                            <li><Link to="/PandaCraftWeb/docs/privacy">Política de privacidad</Link></li>
+                            <li><a href="/PandaCraftWeb/docs/affiliate">Programa de afiliación</a></li>
                         </ul>
                     </div>
                     <div className="footer-col">
                         <h4>Obtén ayuda</h4>
                         <ul>
-                            <li><a href="faq">FAQ</a></li>
-                            <li><a href="shipping">shipping</a></li>
-                            <li><a href="returns">returns</a></li>
-                            <li><a href="order">order status</a></li>
-                            <li><a href="payments">payment options</a></li>
+                            <li><a href="/PandaCraftWeb/docs/faq">FAQ</a></li>
+                            <li><a href="/PandaCraftWeb/docs/shipping">shipping</a></li>
+                            <li><a href="/PandaCraftWeb/docs/returns">returns</a></li>
+                            <li><a href="/PandaCraftWeb/docs/order">order status</a></li>
+                            <li><a href="/PandaCraftWeb/docs/payments">payment options</a></li>
                         </ul>
                     </div>
                     <div className="footer-col">

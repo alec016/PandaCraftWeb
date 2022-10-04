@@ -6,7 +6,7 @@ export default function NavBarGeneral(){
     return (
         <nav className="nav-container">
             <div className="nav-tabs">
-                <Link to="/">
+                <Link to="/PandaCraftWeb/docs/">
                     <input type="radio" id="radio-1" name="nav-tabs"/>
                     <label className="nav-tab" htmlFor="radio-1">Home
                         <span className="nav-notification">5</span>

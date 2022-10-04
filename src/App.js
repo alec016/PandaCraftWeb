@@ -13,10 +13,10 @@ export default function App() {
       <Router>
         <Header/>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/privacy" element={<Privacy/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/PandaCraftWeb/docs/" element={<Home/>}/>
+          <Route path="/PandaCraftWeb/docs/about" element={<About/>}/>
+          <Route path="/PandaCraftWeb/docs/privacy" element={<Privacy/>}/>
+          <Route path="/PandaCraftWeb/docs/profile" element={<Profile/>}/>
         </Routes>
         <Footer/>
       </Router>
