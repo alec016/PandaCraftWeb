@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import './css/header.scss'
 
 export default function Header(){
-    const [online, setOnline] = useState(null);
-    const [playersOnline, setPlayersOnline] = useState(null);
-    const [maxPlayers, setMaxPlayers] = useState(null);
+    const [online, setOnline] = useState(false);
+    const [playersOnline, setPlayersOnline] = useState(0);
+    const [maxPlayers, setMaxPlayers] = useState(0);
     useEffect(() => {
         const interval = setInterval(async ()=>{
             await fetch(`https://api.minetools.eu/ping/mc.pandacraftserver.es/25565`)

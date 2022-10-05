@@ -97,7 +97,7 @@ export default function Profile(){
             if(USER === undefined){
                 if(sesion && typeof ss.getItem('sesion') === 'string') {
                     console.log("user", new Date().toISOString())
-                    iniciar(JSON.parse(ss.getItem('sesion')).user)
+                    iniciar(JSON.parse(ss.getItem('sesion'))?.user)
                 }
             }
                 
