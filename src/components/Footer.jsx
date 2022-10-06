@@ -43,19 +43,19 @@ export default function Footer(){
                         <h4>follow us</h4>
                         <div className="social-links">
                             <a name="discord server" href="http://discord.gg/Dr7RKcmwuF">
-                                <FontAwesomeIcon icon={faDiscord} />
+                                <FontAwesomeIcon icon={faDiscord} title="discord server" />
                             </a>
                             <a name="twitter" href="https://twitter.com/PandaCraftSV?s=20&t=90IfIwHCEhrikWhcMqoY2g">
-                                <FontAwesomeIcon icon={faTwitter} />
+                                <FontAwesomeIcon icon={faTwitter} title="twitter" />
                             </a>
                             <a name="instagram" href="https://www.instagram.com/pandacraftsv/">
-                                <FontAwesomeIcon icon={faInstagram} />
+                                <FontAwesomeIcon icon={faInstagram} title="instagram" />
                             </a>
                             <a name="tiktok" href="https://www.tiktok.com/@pandacraftsv">
-                                <FontAwesomeIcon icon={faTiktok} />
+                                <FontAwesomeIcon icon={faTiktok} title="tiktok" />
                             </a>
                             <a name="twitch" href="https://www.twitch.tv/patakyhd">
-                                <FontAwesomeIcon icon={faTwitch} />
+                                <FontAwesomeIcon icon={faTwitch} title="twitch" />
                             </a>
                         </div>
                     </div>
