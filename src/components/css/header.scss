@@ -1,0 +1,55 @@
+.p-rel{
+    position: relative;
+}
+.p-abs{
+    position: absolute
+}
+.m-50-r {
+    margin-right: 50px;
+}
+.r-0{
+    right: 0;
+}
+.grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 5px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.w-600{
+    font-weight: 700;
+    font-size: 20px;
+}
+.online{
+    background-color: rgba(80, 255, 80,.8) !important;
+}
+.offline{
+    background-color: rgba(255, 111, 111,.8) !important;
+}
+.online, .offline{
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.card{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+}
+.d-none{
+    display: none;
+}
