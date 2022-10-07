@@ -98,8 +98,6 @@ export default function Profile(){
                     iniciar(JSON.parse(ss.getItem('sesion'))?.user)
                 }
             }
-            
-                
         }, 100)
         return () => {
             clearInterval(interval1);
