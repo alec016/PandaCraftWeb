@@ -1,43 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom";
+import StaffCard from './StaffCard';
 import './css/profile.scss'
 
-const datos = document.getElementById('datos')
 export default function Rating(props){
-
-    const html = async () => {
-        let data = '';
-        await fetch('http://localhost:3001/api/staff/getAll')
-        .then(res => res.json())
-        .then(res => {
-            if(res.length === 0) {
-                datos.innerHTML ='<span style="color: red">No hay datos para mostrar</span>'
-                return
-            }
-            for(let ob of res){
-                for(let k in ob){
-                    if(k === 'pass') continue
-                    data += k + ': '
-                    if(k === 'rating'){
-                        data +='{'
-                        for(let j in ob[k]){
-                            if(j === 'rated'){
-                                data += j + ': ' + Boolean(k[j]) + ', '
-                                continue
-                            }
-                            data += j + ': ' + k[j] + ', '
-                        }
-                        data+='}<br/>'
-                        continue
-                    }
-                    data += ob[k] + '<br/>'
-                }
-            }
-            datos.innerHTML = data
-        }).catch(err => {
-            datos.innerHTML =`<span style="color: red">${err.message}</span>`
-        })
-    }
-
+    const user = props.user;
+    const datos = document.getElementById('datos')
     /*const rate = async () => {
         const result = await fetch('http://localhost:3001/api/user/update/' + user.id)
         .then(res => res.json())
@@ -45,34 +13,86 @@ export default function Rating(props){
 
         })
     }*/
+    const [staffs, setStaffs] = useState([])
+    const [rate, setRate] = useState({});
+
+    const vote = async () => {
+        const requestOptions = {
+            rating: {
+                rates: {
+                    _1: rate === 1 ? 1 : 0,
+                    _2: rate === 2 ? 1 : 0,
+                    _3: rate === 3 ? 1 : 0,
+                    _4: rate === 4 ? 1 : 0,
+                    _5: rate === 5 ? 1 : 0,
+                    total: 1
+                }
+            }
+        }
+        await fetch('http://localhost:3001/api/staff/update/' + rate.staffRated, requestOptions)
+        .then(res => res.json())
+        .then(res => {
+
+        }).catch(err => {
+            datos.innerHTML =`<span style="color: red">${err.message}</span>`
+        })
+        console.log(rate)
+    }
 
     useEffect(() => {
-        const interval = setInterval(html, 10*1000)
+        const interval = setInterval(async () => {
+            await fetch('http://localhost:3001/api/staff/getAll')
+            .then(res => res.json())
+            .then(res => {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
+                let array = []
+                let cont = 1;
+                if(res.length === 0) {
+                    datos.innerHTML ='<span style="color: red">No hay datos para mostrar</span>'
+                    return
+                }
+                for(let ob of res){
+                    array.push(<StaffCard number={cont} staff={ob} user={user} rate={setRate}/>);
+                    cont++
+                }
+                setStaffs(array)
+                console.log(staffs)
+            }).catch(err => {
+                datos.innerHTML =`<span style="color: red">${err.message}</span>`
+            })
+        }, 10*1000, 5*1000)
         return () => clearInterval(interval);
-    }, []);
+    }, [datos, staffs, user, setStaffs]);
 
     
 
     return(
-        <div className='subcard grid w-100-p'>
+        <div className='subcard grid w-100-p' id="rating">
             {props.user?.userPermision === 4 ? 
             <div className='col w-100-p'>
-                <div className='row'>
-                    <div id="datos"></div>
-                    <a href="profile/staff">
+                <div className='row' id="staffCards">
+                    <div id="datos" className='text-S'>{staffs}</div>
+                    <a href="#" className="buttonVoto" onClick={vote}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Votar
+                    </a> 
+                    <Link to="staff">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         Añadir staff
-                    </a> 
-                    <a href="profile/staff/ccount">
+                    </Link> 
+                    <Link to="staff/account">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         Añadir usuario staff
-                    </a> 
+                    </Link> 
                 </div>
             </div> : ''}
         </div>

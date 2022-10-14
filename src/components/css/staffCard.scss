@@ -1,0 +1,60 @@
+.no-resize{
+    resize: vertical;
+}
+.staffCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #505050;
+    padding: 20px;
+    border-radius: 20px;
+    & textarea{
+        border-radius: 20px;
+        outline: none;
+        padding: 20px;
+        &:not(:disabled){
+            background-color: #dddcdcce;
+        }
+        &:focus{
+            border: 2px solid var(--turquoise)
+        }
+    }
+    &:first-child{
+        margin-top: 20px;
+    }
+}
+
+#staffCards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    & #datos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+.text-S{
+    font-size: 0.75em;
+    align-self: center;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    & .star{
+        & svg {
+            fill: var(--gray);
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &.selected{
+            & svg{
+                fill: var(--lightyellow);
+            }
+        }
+    }
+}

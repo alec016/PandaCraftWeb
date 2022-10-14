@@ -1,0 +1,11 @@
+#staff{
+    text-align: center;
+    & .p-title{
+        & span{
+            width: 100% !important;
+        }
+    }
+    & a{
+        width: 100%;
+    }
+}

@@ -3,6 +3,8 @@ import React, {useRef} from 'react'
 
 import NavBarA from './NavBarA'
 
+import './css/staff.scss'
+
 const error = document.getElementById('error')
 export default function Staff(props) {
     const name = useRef()
@@ -31,6 +33,9 @@ export default function Staff(props) {
             <div className='p'>
                 <form className='card-p grid'>
                     <div id="staff" className="col">
+                        <div className="row p-title">
+                            <span>Registrar Nuevo Staff</span>
+                        </div>
                         <div className="row user-box">
                             <input type="text" name="userL" id="userL" required ref={name}/>
                             <label htmlFor="userL">Nombre Staff</label>

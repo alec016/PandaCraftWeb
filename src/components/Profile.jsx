@@ -114,8 +114,8 @@ export default function Profile(){
                 {sesion 
                     ?   <div className="card-p grid">
                             <div id="profile" className="col">
-                                <div className="row p-title">
-                                    Bienvenid@ {USER?.userName ?? ''}!
+                                <div className="row p-title" id="usuario">
+                                    <span id="n__usuario">Bienvenid@ {USER?.userName ?? ''}!</span>
                                     <Rating user={USER}/>
                                     <DatosUsuario user={USER}/>
                                 </div>

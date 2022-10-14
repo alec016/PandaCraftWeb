@@ -6,7 +6,7 @@ import * as bcryptjs from "bcryptjs";
 var salt = '$2a$10$t5WteFsEdjhsgcu/zUHTNe';
 
 export default function Staff(props) {
-    const name = useRef()
+
     const userRef = useRef();
     const passRef = useRef();
     const passRef2 = useRef();
@@ -14,7 +14,7 @@ export default function Staff(props) {
 
     const registrar = async () => {
         if(passRef.current.value !== passRef2.current.value) return
-        let pass = passRef2.current.value
+        let pass = passRef.current.value
         var hash = bcryptjs.hashSync(pass, salt);
         const requestOptions = {
             method: 'POST',
@@ -22,13 +22,14 @@ export default function Staff(props) {
             body: JSON.stringify({
                 user: userRef.current.value,
                 pass: hash,
-                email: emailRef.current.value
+                email: emailRef.current.value,
+                userPermision: 4
             })
         };
         await fetch('http://localhost:3001/api/user/post', requestOptions)
             .then(response => response.json())
             .then(data => {
-                
+                window.location.replace('/PandaCraftWeb/docs/profile')
             });
     }
     document.title = "PandaCraft | Staff";
@@ -40,8 +41,20 @@ export default function Staff(props) {
                 <form className='card-p grid'>
                     <div id="staff" className="col">
                         <div className="row user-box">
-                            <input type="text" name="userL" id="userL" required ref={name}/>
-                            <label htmlFor="userL">Nombre Staff</label>
+                            <input type="text" name="user" id="userR" required ref={userRef}/>
+                            <label htmlFor="user">Nombre de Usuario</label>
+                        </div>
+                        <div className="row user-box">
+                            <input type="email" name="email" id="emailR" required ref={emailRef}/>
+                            <label htmlFor="email">Email</label>
+                        </div>
+                        <div className="row user-box">
+                            <input type="password" name="pass" id="passR" required ref={passRef}/>
+                            <label htmlFor="pass">Contraseña</label>
+                        </div>
+                        <div className="row user-box">
+                            <input type="password" name="pass2" id="passR2" required ref={passRef2}/>
+                            <label htmlFor="pass2">Repetir Contraseña</label>
                         </div>
                         <div className="row">
                             <a onClick={registrar}>

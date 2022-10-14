@@ -4,6 +4,7 @@
     --white: white;
     --darkest-gray: #1a1a1a;
     --black: black;
+    --gray: #a5a5a5;
 }
 #root, .principal{
     width: 99vw;

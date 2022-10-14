@@ -132,6 +132,17 @@
                     0 0 100px #03e9f4;
     }
 }
+#usuario{
+    & #n__usuario{
+        text-align: center;
+        width: 100%
+    }
+}
+#rating {
+    & a{
+        width: 100%;
+    }
+}
 @keyframes btn-anim1 {
     0%{
         left: -100%;
