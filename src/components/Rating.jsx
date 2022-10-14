@@ -17,26 +17,70 @@ export default function Rating(props){
     const [rate, setRate] = useState({});
 
     const vote = async () => {
-        const requestOptions = {
-            rating: {
-                rates: {
-                    _1: rate === 1 ? 1 : 0,
-                    _2: rate === 2 ? 1 : 0,
-                    _3: rate === 3 ? 1 : 0,
-                    _4: rate === 4 ? 1 : 0,
-                    _5: rate === 5 ? 1 : 0,
-                    total: 1
+        await fetch('http://localhost:3001/api/staff/update/', {
+            method: 'PATCH',
+            body: JSON.stringify({
+                rank: rate.staffRated.rank,
+                name: rate.staffRated.name,
+                rating: {
+                    rates: {
+                        _1: rate.rate === 1 ? 1 : 0,
+                        _2: rate.rate === 2 ? 1 : 0,
+                        _3: rate.rate === 3 ? 1 : 0,
+                        _4: rate.rate === 4 ? 1 : 0,
+                        _5: rate.rate === 5 ? 1 : 0,
+                        total: 1
+                    }
                 }
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
             }
-        }
-        await fetch('http://localhost:3001/api/staff/update/' + rate.staffRated, requestOptions)
+        })
         .then(res => res.json())
         .then(res => {
 
         }).catch(err => {
             datos.innerHTML =`<span style="color: red">${err.message}</span>`
         })
-        console.log(rate)
+        await fetch('http://localhost:3001/api/user/update/', {
+            method: 'PATCH',
+            body: JSON.stringify({
+                userName: user.userName,
+                rating: {
+                    rated: true,
+                    day: Date.now(),
+                    staff: rate.staffRated,
+                    rating: rate.rate
+                }
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(res => res.json())
+        .then(res => {
+
+        }).catch(err => {
+            datos.innerHTML =`<span style="color: red">${err.message}</span>`
+        })
+        
+        await fetch('http://localhost:3001/api/comment/post/', {
+            method: 'PATCH',
+            body: JSON.stringify({
+                user: user,
+                comment: rate.comment
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+        .then(res => res.json())
+        .then(res => {
+
+        }).catch(err => {
+            datos.innerHTML =`<span style="color: red">${err.message}</span>`
+        })
     }
 
     useEffect(() => {
@@ -72,7 +116,7 @@ export default function Rating(props){
             <div className='col w-100-p'>
                 <div className='row' id="staffCards">
                     <div id="datos" className='text-S'>{staffs}</div>
-                    <a href="#" className="buttonVoto" onClick={vote}>
+                    <a href="" className="buttonVoto" onClick={vote}>
                         <span></span>
                         <span></span>
                         <span></span>

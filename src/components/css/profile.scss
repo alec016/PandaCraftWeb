@@ -68,7 +68,6 @@
     }
     & a:not(:first-child){
         margin-left: 40px;
-        margin-right: 40px;
     }
     & a{
         width: 45%;
@@ -141,6 +140,7 @@
 }
 #rating {
     & a{
+        margin-right: 40px;
         width: calc(100% - 80px);
     }
 }
@@ -192,7 +192,7 @@
             margin-left: 0
         }
         & a{
-            width: calc(100% - 40px);
+            width: 100%;
             text-align: center;
         }
     }

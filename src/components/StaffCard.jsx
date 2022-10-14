@@ -21,7 +21,7 @@ export default function StaffCard(props){
         const text = document.querySelector('#text_' + props.number)
         text.disabled = false
         rate = {
-            staffRated: props.number,
+            staffRated: staff,
             rate: number,
             user: user
         };
