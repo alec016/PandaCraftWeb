@@ -8,6 +8,7 @@ import './css/staff.scss'
 const error = document.getElementById('error')
 export default function Staff(props) {
     const name = useRef()
+    const rank = useRef()
 
     const registrar = async () => {
         if(name.current.value === '' | undefined | null) return
@@ -15,7 +16,8 @@ export default function Staff(props) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                name: name.current.value
+                name: name.current.value,
+                rank: rank.current.value
             })
         };
         await fetch('http://localhost:3001/api/staff/post', requestOptions)
@@ -39,6 +41,17 @@ export default function Staff(props) {
                         <div className="row user-box">
                             <input type="text" name="userL" id="userL" required ref={name}/>
                             <label htmlFor="userL">Nombre Staff</label>
+                        </div>
+                        <div className='row user-box'>
+                            <select name="rank" id="rank" required ref={rank}>
+                                <option value="Selecciona" defaultChecked>Selecciona</option>
+                                <option value="Owner">Owner</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Sr.Mod">Sr.Mod</option>
+                                <option value="Mod">Mod</option>
+                                <option value="Helper">Helper</option>
+                                <option value="Configurador">Configurador</option>
+                            </select>
                         </div>
                         <div className="row">
                             <a onClick={registrar}>

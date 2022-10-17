@@ -8,4 +8,14 @@
     & a{
         width: 100%;
     }
+    & #rank {
+        border-radius: 20px;
+        outline: none;
+        padding: 10px;
+        text-align: center;
+        border: 2px solid var(--turquoise);
+        width: 100%;
+        font-size: 22px;
+    }
 }
+

@@ -4,11 +4,13 @@
 .staffCard{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     background-color: #505050;
     padding: 20px;
     border-radius: 20px;
+    margin-top: 20px;
     & textarea{
         border-radius: 20px;
         outline: none;
@@ -20,9 +22,6 @@
             border: 2px solid var(--turquoise)
         }
     }
-    &:first-child{
-        margin-top: 20px;
-    }
 }
 
 #staffCards{
@@ -30,10 +29,56 @@
     align-items: center;
     flex-direction: column;
     & #datos{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        /*display: flex;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column;*/
         gap: 40px;
+    }
+    & .enlaces{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-height: 20px;
+        justify-content: center;
+        align-items: center;
+        & a{
+            margin-left: 40px;
+            width: 32% !important;
+        }
+    }
+}
+@media screen and(max-width: 1300px) {
+    #staffCards{
+        & #datos{
+            grid-template-columns: repeat(2, auto) !important;
+        }
+        & .staffCard{
+            margin-top: 0px;
+            &:first-child, &:nth-child(2){
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media screen and(max-width: 1100px) {
+    #staffCards{
+        & .staffCard{
+            margin-top: 0px;
+            &:first-child{
+                margin-top: 20px;
+            }
+        }
+        & #datos{
+            grid-template-columns: repeat(1, auto) !important;
+        }
+        & .enlaces{
+            flex-direction: column !important;
+            & a{
+                width: 100% !important;
+            }
+        }
     }
 }
 .text-S{

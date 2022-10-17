@@ -77,7 +77,8 @@ export default function StaffCard(props){
                 <textarea className="no-resize" id={"text_" + props.number} cols="40" rows="5" ref={commentRef} onChange={() => {
                     rate.comment = commentRef.current.value
                     setRate(rate)
-                    }} disabled></textarea>
+                    }} disabled>
+                </textarea>
             </div>
         </div>
     )

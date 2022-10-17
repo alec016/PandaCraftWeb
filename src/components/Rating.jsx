@@ -116,27 +116,29 @@ export default function Rating(props){
             <div className='col w-100-p'>
                 <div className='row' id="staffCards">
                     <div id="datos" className='text-S'>{staffs}</div>
-                    <a href="" className="buttonVoto" onClick={vote}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Votar
-                    </a> 
-                    <Link to="staff">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Añadir staff
-                    </Link> 
-                    <Link to="staff/account">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Añadir usuario staff
-                    </Link> 
+                    <div className='enlaces'>
+                        <a href="" className="buttonVoto" onClick={vote}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Votar
+                        </a> 
+                        <Link to="staff">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Añadir staff
+                        </Link> 
+                        <Link to="staff/account">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Añadir usuario staff
+                        </Link> 
+                    </div>
                 </div>
             </div> : ''}
         </div>

@@ -28,7 +28,7 @@
 }
 .card-p{
     background: rgba(97, 97, 97, 0.5);
-    width: 40%;
+    width: fit-content;
     padding: 50px 30px;
     border-radius: 15px;
     margin: auto;
@@ -174,16 +174,6 @@
     }
     50%,100%{
         bottom: 100%;
-    }
-}
-@media screen and ( max-width: 1200px ){
-    .card-p{
-        width: 50%;
-    }
-}
-@media screen and ( max-width: 700px ){
-    .card-p{
-        width: 80%;
     }
 }
 @media screen and ( max-width: 1000px ){
