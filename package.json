@@ -20,10 +20,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://alec016.github.io/PandaCraftWeb/docs/",
+  "homepage": "/PandaCraftWeb/docs/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -51,19 +51,5 @@
   },
   "devDependencies": {
     "node-sass": "^7.0.3"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alec016/PandaCraftWeb.git"
-  },
-  "author": "Alec",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alec016/PandaCraftWeb/issues"
   }
 }
