@@ -1,5 +1,4 @@
 .h{
-    padding-left: 5vw;
     color: white;
     margin: 40px 0;
     & > .h-title{
@@ -11,12 +10,27 @@
 }
 .h-text{
     font-size: 1.75rem;
-    padding-left: 5vw;
     & > p:not(:last-child){
         margin-bottom: 30px;
     }
 }
 .h-subtitle{
     text-decoration: underline;
-    margin-left: -3vw;
+}
+.card-h{
+    background: rgba(97, 97, 97, 0.5);
+    padding: 20px 0px;
+    border-radius: 15px;
+    & *{
+        margin: 40px;
+    }
+}
+.p-20{
+    padding: 20px;
+}
+.m-auto{
+    margin: auto;
+}
+.w90{
+    width: 90%;
 }
