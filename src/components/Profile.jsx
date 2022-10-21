@@ -112,7 +112,7 @@ export default function Profile(){
             <NavBarA/>
             <div className='p'>
                 {sesion 
-                    ?   <div className="card-p grid">
+                    ?   <div className="card-p w90 grid">
                             <div id="profile" className="col">
                                 <div className="row p-title" id="usuario">
                                     <span id="n__usuario">Bienvenid@ {USER?.userName ?? ''}!</span>

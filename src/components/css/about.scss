@@ -1,5 +1,4 @@
 .a{
-    padding-left: 5vw;
     color: white;
     margin: 40px 0;
     & > .a-title{
@@ -10,8 +9,8 @@
     }
 }
 .a-text{
-    font-size: 1.75rem;
     padding-left: 5vw;
+    font-size: 1.75rem;
     & > p:not(:last-child){
         margin-bottom: 30px;
     }

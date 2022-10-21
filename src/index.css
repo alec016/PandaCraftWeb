@@ -6,6 +6,9 @@
     --black: black;
     --gray: #a5a5a5;
 }
+.w75{
+    width: 75% !important;
+}
 #root, .principal{
     width: 99vw;
     overflow-x: hidden;
