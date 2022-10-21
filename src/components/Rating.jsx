@@ -117,7 +117,7 @@ export default function Rating(props){
                 <div className='row' id="staffCards">
                     <div id="datos" className='text-S'>{staffs}</div>
                     <div className='enlaces'>
-                        <a href="" className="buttonVoto" onClick={vote}>
+                        <a href="./profile" className="buttonVoto" onClick={vote}>
                             <span></span>
                             <span></span>
                             <span></span>
